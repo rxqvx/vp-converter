@@ -9,10 +9,10 @@ import { useState } from "react";
 type TMapper = { [key: number]: { bonus: number; costPerVp: number } };
 
 export default function Home() {
-  const [vpValue, setVpValue] = useState<number>();
+  const [vpValue, setVpValue] = useState<number>(0);
   const [bonus, setBonus] = useState<number>(0);
   const [realBonus, setRealBonus] = useState<number>(0);
-  const [currencyValue, setCurrencyValue] = useState<number>();
+  const [currencyValue, setCurrencyValue] = useState<number>(0);
 
   const vpValues = [
     { id: 1, vp: 475, bonus: 0, costPerVp: 0.0356, real: 16.9 }, //cpv = 16.90 / (475 + 0) ≈ 0.0356 R$/VP
@@ -115,7 +115,10 @@ export default function Home() {
                   <MoneyIcon />
                   Reais (R$):{" "}
                   <strong className="font-bold text-2xl pl-3">
-                    {currencyValue}
+                    {Math.round(currencyValue).toLocaleString("pt-br", {
+                      style: "currency",
+                      currency: "BRL",
+                    })}
                   </strong>
                 </div>
               </div>
@@ -140,7 +143,9 @@ export default function Home() {
                 <div className="flex flex-row items-end justify-start  mb-2 text-sm font-medium text-gray-200 dark:text-white">
                   <ValorantIcon />
                   Valorant Points (VP):{" "}
-                  <strong className="font-bold text-2xl pl-3">{vpValue}</strong>
+                  <strong className="font-bold text-2xl pl-3">
+                    {Math.round(Number(vpValue))} VP
+                  </strong>
                 </div>
               </div>
             </div>
