@@ -6,6 +6,7 @@ import Image from "next/image";
 import Footer from "@/components/Footer";
 import VPConverter from "@/components/VPConverter";
 import ReaisConverter from "@/components/ReaisConverter";
+import { Fade } from "react-awesome-reveal";
 
 export default function Home() {
 	const [showMessage, setShowMessage] = useState<boolean>(true);
@@ -33,7 +34,10 @@ export default function Home() {
 			<div className=" p-24 flex justify-center items-center">
 				<div className="glassmorphism md:w-full md:max-w-full w-fit max-w-[300px]">
 					{showMessage ? (
-						<div className="text-zinc-200 flex flex-col text-center">
+						<Fade
+							className="text-zinc-200 flex flex-col text-center"
+							direction="left"
+						>
 							<h2>Atenção</h2>
 							<p>
 								Os valores não podem ser determinados com
@@ -63,7 +67,7 @@ export default function Home() {
 									(esconder mensagem)
 								</button>
 							</p>
-						</div>
+						</Fade>
 					) : (
 						<button
 							onClick={() => setShowMessage(true)}
@@ -72,14 +76,23 @@ export default function Home() {
 							(mostrar mensagem)
 						</button>
 					)}
-					<div className="md:flex hidden flex-row items-center justify-evenly">
+					<Fade
+						className="md:flex hidden flex-row items-center justify-evenly "
+						cascade
+						direction="right"
+					>
 						<VPConverter />
 						<ReaisConverter />
-					</div>
-					<div className="flex md:hidden flex-col items-center justify-center">
+					</Fade>
+
+					<Fade
+						className="flex md:hidden flex-col items-center justify-center"
+						cascade
+						direction="right"
+					>
 						<VPConverter />
 						<ReaisConverter />
-					</div>
+					</Fade>
 					<div className="w-full flex justify-center items-center">
 						<button
 							onClick={() =>
