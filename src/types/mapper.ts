@@ -5,7 +5,3 @@ export interface IVP {
 	costPerVp: number;
 	real: number;
 }
-
-export interface IConverter {
-	className?: string;
-}

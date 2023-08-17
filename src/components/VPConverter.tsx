@@ -2,9 +2,8 @@ import { useState } from "react";
 import ValorantIcon from "./icons/ValorantIcon";
 import { vpValues } from "@/constants/values";
 import MoneyIcon from "./icons/MoneyIcon";
-import { IConverter } from "@/types/mapper";
 
-const VPConverter = ({ className }: IConverter) => {
+const VPConverter = () => {
 	const [bonus, setBonus] = useState<number>(0);
 	const [currencyValue, setCurrencyValue] = useState<number>(0);
 
