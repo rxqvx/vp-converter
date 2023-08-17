@@ -37,10 +37,9 @@ const VPConverter = () => {
 				className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-rose-500 focus:border-rose-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-rose-500 dark:focus:border-rose-500"
 			/>
 			<p className="text-zinc-400">Bônus: {bonus}</p>
-			<div className="flex flex-row items-end justify-start  mb-2 text-sm font-medium text-gray-200 dark:text-white md:overflow-auto truncate">
-				<MoneyIcon />
-				<p className="hidden md:flex">Reais (R$): </p>
-				<strong className="font-bold text-2xl pl-3">
+			<div className="flex flex-col items-center justify-start  mb-2 text-sm font-medium text-gray-200 dark:text-white md:overflow-auto truncate">
+				<p className="text-zinc-200 text-sm">Valor convertido(R$):</p>
+				<strong className="font-bold text-2xl">
 					{Math.round(currencyValue).toLocaleString("pt-br", {
 						style: "currency",
 						currency: "BRL",
