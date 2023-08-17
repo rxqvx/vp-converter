@@ -31,7 +31,7 @@ export default function Home() {
 			<h1 className="font-bold z-10 text-zinc-200 text-5xl text-center">
 				Conversor de Valorant Points (VP)
 			</h1>
-			<div className=" p-24 flex justify-center items-center">
+			<div className=" p-24 flex justify-center items-center w-full">
 				<div className="glassmorphism md:w-full md:max-w-full w-fit max-w-[300px]">
 					{showMessage ? (
 						<Fade

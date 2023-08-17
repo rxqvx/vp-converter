@@ -37,10 +37,10 @@ const ReaisConverter = () => {
 				className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-rose-500 focus:border-rose-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-rose-500 dark:focus:border-rose-500"
 			/>
 			<p className="text-zinc-400">Bônus: {realBonus}</p>
-			<div className="flex flex-row items-end justify-start  mb-2 text-sm font-medium text-gray-200 dark:text-white md:overflow-auto overflow-scroll">
+			<div className="flex flex-row items-end justify-start  mb-2 text-sm font-medium text-gray-200 dark:text-white md:overflow-auto truncate">
 				<ValorantIcon />
-				Valorant Points (VP):{" "}
-				<strong className="font-bold text-2xl pl-3">
+				<p className="hidden md:flex">Valorant Points (VP): </p>
+				<strong className="font-bold md:text-2xl text-lg pl-3">
 					{Math.round(Number(vpValue))} VP
 				</strong>
 			</div>
