@@ -84,7 +84,6 @@ export default function Home() {
 						<VPConverter />
 						<ReaisConverter />
 					</Fade>
-
 					<Fade
 						className="flex md:hidden flex-col items-center justify-center"
 						cascade
