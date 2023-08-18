@@ -44,21 +44,22 @@ export default function Home() {
 								precisão devido à seguinte razão:
 							</p>
 							<p>
-								Não é viável estimar um valor exato devido à
-								natureza fixa e constante dos valores e bônus
-								envolvidos. Eles não seguem um padrão de aumento
-								com base em uma sequência numérica. Os cálculos
-								empregam médias e estimativas, considerando
-								também as flutuações nas taxas de câmbio, além
-								das discrepâncias nos bônus e custos associados
-								a cada pacote. Essa individualidade dos bônus
+								Não é viável estimar um valor exato devido os
+								valores e os bônus serem fixos e constantes.
+								Eles não seguem um padrão de aumento com base em
+								uma sequência numérica. Os cálculos empregam
+								médias e estimativas, considerando também as
+								flutuações nas taxas de câmbio, além das
+								discrepâncias nos bônus e custos associados a
+								cada pacote. Essa individualidade dos bônus
 								conforme o pacote é evidenciada por exemplos
 								como 475 - sem bônus, 1200 - 80 de bônus, 2300 -
 								190 de bônus, e assim por diante.{" "}
 								<strong className="text-yellow-300">
-									Resumidamente, se o valor inserido não
-									corresponder ao valor dos pacotes, não será
-									aplicado nenhum bônus.
+									Resumidamente, Não há como estimar um valor
+									exato e se o valor inserido não corresponder
+									ao valor dos pacotes, não será aplicado
+									nenhum bônus.
 								</strong>
 								<button
 									onClick={() => setShowMessage(false)}
